@@ -16,7 +16,7 @@ export default function FilterSidebar() {
     <aside className="filter-sidebar">
       <label className="filter-sidebar__customizable">
         <input type="checkbox" />
-        <span>CUSTOMIZBLE</span>
+        <span>CUSTOMIZABLE</span>
       </label>
 
       {filterSections.map((section) => (
