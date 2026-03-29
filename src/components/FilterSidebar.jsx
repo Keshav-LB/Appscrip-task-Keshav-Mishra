@@ -1,7 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const filterSections = [
-  "IDEAL FOR",
   "OCCASION",
   "WORK",
   "FABRIC",
@@ -11,7 +13,11 @@ const filterSections = [
   "PATTERN",
 ];
 
+const idealForOptions = ["Men", "Women", "Baby & Kids"];
+
 export default function FilterSidebar() {
+  const [idealForOpen, setIdealForOpen] = useState(true);
+
   return (
     <aside className="filter-sidebar">
       <label className="filter-sidebar__customizable">
@@ -19,13 +25,49 @@ export default function FilterSidebar() {
         <span>CUSTOMIZABLE</span>
       </label>
 
+      <div className="filter-sidebar__section filter-sidebar__section--expanded">
+        <button
+          type="button"
+          className="filter-sidebar__section-head filter-sidebar__section-head--button"
+          onClick={() => setIdealForOpen((prev) => !prev)}
+          aria-expanded={idealForOpen}
+        >
+          <span>IDEAL FOR</span>
+          <ChevronDown
+            size={16}
+            strokeWidth={1.7}
+            className={idealForOpen ? "filter-sidebar__chevron--open" : ""}
+          />
+        </button>
+
+        <p className="filter-sidebar__summary">All</p>
+
+        {idealForOpen && (
+          <div className="filter-sidebar__values">
+            <button type="button" className="filter-sidebar__unselect">
+              Unselect all
+            </button>
+
+            {idealForOptions.map((item) => (
+              <label className="filter-sidebar__value" key={item}>
+                <input type="checkbox" />
+                <span>{item}</span>
+              </label>
+            ))}
+          </div>
+        )}
+      </div>
+
       {filterSections.map((section) => (
         <div className="filter-sidebar__section" key={section}>
-          <div className="filter-sidebar__section-head">
+          <button
+            type="button"
+            className="filter-sidebar__section-head filter-sidebar__section-head--button"
+          >
             <span>{section}</span>
             <ChevronDown size={16} strokeWidth={1.7} />
-          </div>
-          <p>All</p>
+          </button>
+          <p className="filter-sidebar__summary">All</p>
         </div>
       ))}
     </aside>
