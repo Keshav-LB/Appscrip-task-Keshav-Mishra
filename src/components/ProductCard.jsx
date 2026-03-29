@@ -23,7 +23,9 @@ export default function ProductCard({ product }) {
         <h3>{product.name}</h3>
 
         <div className="product-card__bottom">
-          <p>Sign in or Create an account to see pricing</p>
+          <p>
+            <a href="#">Sign in</a> or Create an account to see pricing
+          </p>
 
           <button
             type="button"
@@ -32,7 +34,11 @@ export default function ProductCard({ product }) {
             }`}
             aria-label="Add to wishlist"
           >
-            <Heart size={20} strokeWidth={1.8} fill={product.liked ? "#EB4C6B" : "none"} />
+            <Heart
+              size={20}
+              strokeWidth={1.8}
+              fill={product.liked ? "#EB4C6B" : "none"}
+            />
           </button>
         </div>
       </div>
