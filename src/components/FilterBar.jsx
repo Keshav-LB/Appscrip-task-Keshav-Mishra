@@ -72,7 +72,10 @@ export default function FilterBar({ showFilters, onToggleFilters }) {
                     <span className="filter-bar__dropdown-check">
                       {isActive ? <Check size={18} strokeWidth={2.4} /> : null}
                     </span>
-                    <span>{option}</span>
+
+                    <span className="filter-bar__dropdown-label">
+                      {option}
+                    </span>
                   </button>
                 );
               })}
