@@ -24,7 +24,13 @@ export default function HomePage() {
         />
 
         <section className="page-section products-section">
-          <div className="container products-layout">
+          <div
+            className={`container products-layout ${
+              showFilters
+                ? "products-layout--with-sidebar"
+                : "products-layout--full"
+            }`}
+          >
             {showFilters && <FilterSidebar />}
             <ProductGrid products={products} />
           </div>
