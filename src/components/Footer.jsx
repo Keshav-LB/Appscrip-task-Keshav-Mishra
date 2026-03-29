@@ -1,9 +1,7 @@
-
 export default function Footer() {
   return (
     <footer className="site-footer page-section">
       <div className="container site-footer__inner">
-        {/* top row */}
         <div className="site-footer__top">
           <div className="site-footer__newsletter">
             <h2>BE THE FIRST TO KNOW</h2>
@@ -30,12 +28,8 @@ export default function Footer() {
               <h2>CURRENCY</h2>
 
               <div className="site-footer__currency-row">
-                <span className="site-footer__flag" aria-hidden="true">
-                  🇺🇸
-                </span>
-                <span className="site-footer__dot" aria-hidden="true">
-                  •
-                </span>
+                <span className="site-footer__flag" aria-hidden="true">🇺🇸</span>
+                <span className="site-footer__dot" aria-hidden="true">•</span>
                 <span className="site-footer__currency-code">USD</span>
               </div>
 
@@ -49,7 +43,6 @@ export default function Footer() {
 
         <div className="site-footer__divider" />
 
-        {/* bottom row */}
         <div className="site-footer__bottom-grid">
           <div className="site-footer__column">
             <h3>mettā muse</h3>
@@ -80,12 +73,8 @@ export default function Footer() {
             <div className="site-footer__social-block">
               <h3>FOLLOW US</h3>
               <div className="site-footer__socials">
-                <a href="#" aria-label="Instagram" className="site-footer__social-icon">
-                  ig
-                </a>
-                <a href="#" aria-label="LinkedIn" className="site-footer__social-icon">
-                  in
-                </a>
+                <a href="#" aria-label="Instagram" className="site-footer__social-icon">ig</a>
+                <a href="#" aria-label="LinkedIn" className="site-footer__social-icon">in</a>
               </div>
             </div>
 
