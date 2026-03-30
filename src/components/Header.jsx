@@ -1,25 +1,31 @@
-import {
-  Search,
-  Heart,
-  ShoppingBag,
-  User,
-  ChevronDown,
-} from "lucide-react";
+import { Search, Heart, ShoppingBag, User, ChevronDown } from "lucide-react";
 
 export default function Header() {
   return (
     <header className="site-header">
       <div className="top-strip">
         <div className="top-strip__item">
-          <span className="top-strip__mark">◫</span>
+          <img
+            src="/images/top-strip-mark.png"
+            alt=""
+            className="top-strip__mark"
+          />
           <span>Lorem ipsum dolor</span>
         </div>
         <div className="top-strip__item">
-          <span className="top-strip__mark">◫</span>
+          <img
+            src="/images/top-strip-mark.png"
+            alt=""
+            className="top-strip__mark"
+          />
           <span>Lorem ipsum dolor</span>
         </div>
         <div className="top-strip__item">
-          <span className="top-strip__mark">◫</span>
+          <img
+            src="/images/top-strip-mark.png"
+            alt=""
+            className="top-strip__mark"
+          />
           <span>Lorem ipsum dolor</span>
         </div>
       </div>
@@ -27,9 +33,11 @@ export default function Header() {
       <div className="header-main page-section">
         <div className="container header-main__inner">
           <div className="header-main__left">
-            <div className="brand-logo-box">
-              <div className="brand-logo-inner" />
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Brand Logo"
+              className="brand-logo-image"
+            />
           </div>
 
           <div className="header-main__logo">LOGO</div>
