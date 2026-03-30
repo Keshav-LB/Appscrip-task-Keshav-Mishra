@@ -72,8 +72,11 @@ button {
 }
 
 .top-strip__mark {
-  font-size: 14px;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-main {
@@ -109,20 +112,11 @@ button {
   color: #000;
 }
 
-.brand-logo-box {
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid #111;
-  border-radius: 8px;
-  position: relative;
-  transform: rotate(45deg);
-}
-
-.brand-logo-inner {
-  position: absolute;
-  inset: 5px;
-  border: 1.2px solid #111;
-  border-radius: 6px;
+.brand-logo-image {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
 }
 
 .header-lang {
@@ -814,15 +808,9 @@ button {
     font-size: 14px;
   }
 
-  .brand-logo-box {
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
-  }
-
-  .brand-logo-inner {
-    inset: 2px;
-    border-radius: 3px;
+  .brand-logo-image {
+    width: 20px;
+    height: 20px;
   }
 
   .header-main__right {
